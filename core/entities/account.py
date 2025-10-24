@@ -68,22 +68,9 @@ class Account:
     def get_transaction_history(self):
         return self.transactions
 
-#ниже тесты 
-test = Account("Артём", 1000)
-print("Баланс ", test.get_balance())
 
-test.deposit(500, "штраф")
-print("Баланс ", test.get_balance())
-
-test.withdraw(5555555, "штраф")
-print("Баланс ", test.get_balance())
-
-test.withdraw(500, "штраф")
-print("Баланс ", test.get_balance())
-
-
-for i, tx in enumerate(test.get_transaction_history(), 1):
-    status = "✅" if tx["status"] == "SUCCESS" else "❌"
-    print(f"{i}. {status} {tx['type']}: {tx['amount']} - {tx['description']}")
-    if tx["status"] == "ERROR":
-        print(f"   Ошибка: {tx['error']}")
+#for i, tx in enumerate(test.get_transaction_history(), 1):
+#    status = "✅" if tx["status"] == "SUCCESS" else "❌"
+#    print(f"{i}. {status} {tx['type']}: {tx['amount']} - {tx['description']}")
+#    if tx["status"] == "ERROR":
+#        print(f"   Ошибка: {tx['error']}")
