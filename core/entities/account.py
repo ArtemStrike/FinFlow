@@ -68,6 +68,7 @@ class Account:
     def get_transaction_history(self):
         return self.transactions
 
+#ниже тесты 
 test = Account("Артём", 1000)
 print("Баланс ", test.get_balance())
 
