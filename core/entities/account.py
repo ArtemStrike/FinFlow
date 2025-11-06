@@ -4,7 +4,7 @@ class Account:
     """Класс пользователя с основными методами списаний, пополнений, проверки баланса и проверкой истории операций"""
 
     #конструктор
-    def __init__(self, name, balance=0, currency="RUB"):
+    def __init__(self, name, balance, currency):
         #ниже все атрибуты экземпляра
         self.name = name
         self.balance = balance
@@ -63,7 +63,7 @@ class Account:
     #метод получения баланса
     def get_balance(self):
         return self.balance
-    
+     
     #метод получения истории операций
     def get_transaction_history(self):
         return self.transactions
